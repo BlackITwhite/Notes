@@ -1,0 +1,29 @@
+import React,{Component, Fragment} from 'react'
+
+class TodoList extends Component{
+	constructor(props){
+		super(props);
+		this.state = {
+			inputValue:'asd'
+		}
+	}
+	render(){
+		return(
+			<Fragment>
+				<input value={this.state.value} onChange={this.handleChange.bind(this)} type="text"/>
+				<button>提交</button>
+				<ul>
+					<li>react牛逼</li>
+					<li>react很强</li>
+				</ul>
+			</Fragment>
+		)
+	}
+	handleChange(e){
+		this.setState({
+			inputValue:e.target.value
+		})
+	}
+}
+
+export default TodoList;
